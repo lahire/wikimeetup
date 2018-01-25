@@ -2,11 +2,7 @@ import pywikibot
 
 
 SITE = pywikibot.Site("es", "wikipedia") #Busco elemento en es.wiki
-try:
-    KEY = input('Ingrese lo que se quiera buscar en es.wiki:\n')
-except:
-    print('Escriba algo coherente :-(')
-
+KEY = input('Ingrese lo que se quiera buscar en es.wiki:\n')
 if KEY == '':
     KEY = 'Douglas Adams'
 
@@ -24,5 +20,5 @@ except pywikibot.exceptions.NoPage:
 
 print(ITEM)
 print(dir(ITEM))
-item_dict = ITEM.get()
-print(item_dict.keys())
+ITEM_DICT = ITEM.get()
+print(ITEM_DICT.keys())
